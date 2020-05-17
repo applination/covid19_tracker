@@ -13,8 +13,8 @@ class _HomePageState extends State<HomePage> {
   Map worldData;
 
   fetchWorldWideData() async {
-    http.Response response = await http
-        .get('https://disease.sh/v2/countries/India?yesterday=0&strict=false');
+    http.Response response =
+        await http.get('https://disease.sh/v2/countries/India?yesterday=true');
     setState(() {
       worldData = json.decode(response.body);
     });

@@ -40,6 +40,30 @@ class WorldWidePanel extends StatelessWidget {
             textColor: Colors.grey[200],
             count: worldData['deaths'].toString(),
           ),
+          StatusPanel(
+            title: 'Today\'s active',
+            panelColor: Colors.green[700],
+            textColor: Colors.green[100],
+            count: worldData['todayCases'].toString(),
+          ),
+          StatusPanel(
+            title: 'Today\'s deaths',
+            panelColor: Colors.black,
+            textColor: Colors.grey[200],
+            count: worldData['todayDeaths'].toString(),
+          ),
+          StatusPanel(
+            title: 'Population',
+            panelColor: Colors.yellow,
+            textColor: Colors.black,
+            count: worldData['population'].toString(),
+          ),
+          StatusPanel(
+            title: 'Tests',
+            panelColor: Colors.pink,
+            textColor: Colors.white,
+            count: worldData['tests'].toString(),
+          ),
         ],
       ),
     );
